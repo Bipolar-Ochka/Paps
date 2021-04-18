@@ -1,0 +1,7 @@
+CREATE TRIGGER [dbo].[Trigger_Dogovors]
+    ON [dbo].[Dogovors]
+	AFTER INSERT
+	AS UPDATE [dbo].[Table]
+	SET [dbo].[Table].[Placed] = i.[Id] 
+	FROM INSERTED i
+	INNER JOIN [dbo].[Table] t2 ON t2.[Id] = i.[Cod_place]

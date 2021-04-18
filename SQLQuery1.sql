@@ -1,0 +1,1 @@
+﻿SELECT Id, Zone, Number FROM [dbo].[Table] WHERE Placed IS NULL
